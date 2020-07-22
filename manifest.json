@@ -1,0 +1,17 @@
+{
+  "title": "百度云下载插件",
+  "version": 0.1,
+  "description": "可以直接获取下载链接并推送到Proxyee Down下载",
+  "proxyWildcards": ["pan.baidu.com", "yun.baidu.com", "d.pcs.baidu.com"],
+  "sniffRegexs": [],
+  "contentScripts": [
+    {
+      "matches": ["^(pan|yun).baidu.com/disk/home.*$"],
+      "scripts": ["common.js", "home.js"]
+    },
+    {
+      "matches": ["^(pan|yun).baidu.com/(s/|share/link).*$"],
+      "scripts": ["common.js", "share.js"]
+    }
+  ]
+}
